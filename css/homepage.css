@@ -1,3 +1,7 @@
+*{
+
+   overflow: hidden;
+}
 #page-welcome {
   background: transparent url("../img/descarga.jpg") no-repeat center;
   background-size: cover;
@@ -31,6 +35,23 @@
 #page-welcome #welcome-container img {
   width: 30vw;
   height: 30vh;
+}
+
+#page-container{
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   z-index: 5;
+   background: #fff;
+   transition: 1s all ease;
+}
+
+.hide{
+   top: 100%;
+}
+
+.show{
+   top:0%;
 }
 
 @keyframes bounce {
