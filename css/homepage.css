@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   overflow: hidden;
 }
+
 #page-welcome {
   background: transparent url("../img/descarga.jpg") no-repeat center;
   background-size: cover;
@@ -71,6 +74,10 @@
 
 .show {
   top: 0%;
+}
+
+#content-container{
+   font-family: 'Roboto', sans-serif;
 }
 
 footer {
