@@ -1,6 +1,5 @@
-*{
-
-   overflow: hidden;
+* {
+  overflow: hidden;
 }
 #page-welcome {
   background: transparent url("../img/descarga.jpg") no-repeat center;
@@ -27,9 +26,9 @@
   width: 6rem;
 }
 
-#scroll-arrow:hover{
-   opacity: 1;
-   cursor: pointer;
+#scroll-arrow:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 #page-welcome #welcome-container img {
@@ -37,21 +36,47 @@
   height: 30vh;
 }
 
-#page-container{
-   width: 100vw;
-   height: 100vh;
-   position: absolute;
-   z-index: 5;
-   background: #fff;
-   transition: 1s all ease;
+#page-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+  background: #fff;
+  transition: 0.8s all ease;
 }
 
-.hide{
-   top: 100%;
+#page-container #navbar {
+  background: transparent
+    linear-gradient(-90deg, #db3149 0%, #803266 45%, #483843 62%, #131615 100%)
+    0% 0% no-repeat padding-box !important;
 }
 
-.show{
-   top:0%;
+#navbar {
+  position: relative !important;
+}
+.brand {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important; /* 50% of your logo width */
+  display: block;
+}
+
+#showWelcome {
+  cursor: pointer;
+}
+
+.hide {
+  top: 100%;
+}
+
+.show {
+  top: 0%;
+}
+
+footer {
+  background: #1b0310;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes bounce {
