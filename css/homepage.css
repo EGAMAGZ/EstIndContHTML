@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
-  overflow: hidden;
+body {
+    overflow: hidden;
 }
 
 #page-welcome {
@@ -70,10 +70,14 @@
 
 .hide {
   top: 100%;
+  /* overflow: hidden; */
 }
 
 .show {
   top: 0%;
+  /* TODO:  PASS THE SOLUTION OF OVERFLOW ISSUE TO HTML REPOSITORY*/
+  overflow-y: visible;
+  overflow-x: hidden;
 }
 
 #content-container{
