@@ -1,0 +1,21 @@
+{
+  "name": "estindconthtml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass scss:css",
+    "watch": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EGAMAGZ/EstIndContHTML.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EGAMAGZ/EstIndContHTML/issues"
+  },
+  "homepage": "https://github.com/EGAMAGZ/EstIndContHTML#readme"
+}
