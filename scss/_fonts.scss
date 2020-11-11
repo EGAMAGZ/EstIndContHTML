@@ -8,5 +8,11 @@
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
 
+@font-face{
+    font-family: "Lato Black";
+    src: url("../fonts/Lato-Black.ttf") format("truetype");
+}
+
+$header-font-family: 'Lato Black', sans-serif;
 $title-font-family: 'Lato', sans-serif;
 $text-font-family: 'Roboto', sans-serif;
