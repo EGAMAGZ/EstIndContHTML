@@ -80,9 +80,6 @@ body {
           background: white;
           color: #262424;
         }
-        & span {
-          font-size: 1.5em;
-        }
       }
       & button {
         width: 100%;
@@ -152,6 +149,10 @@ body {
 
 #showWelcome {
   cursor: pointer;
+}
+
+#menuToogle{
+  border-color: #fff;
 }
 
 .hide {

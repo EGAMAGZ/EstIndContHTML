@@ -92,9 +92,6 @@ body {
   background: white;
   color: #262424;
 }
-.sidenav ul li a span {
-  font-size: 1.5em;
-}
 .sidenav ul li button {
   width: 100%;
   display: flex;
@@ -157,6 +154,10 @@ body {
 
 #showWelcome {
   cursor: pointer;
+}
+
+#menuToogle {
+  border-color: #fff;
 }
 
 .hide {
