@@ -1,8 +1,14 @@
 @use 'base';
 @use 'fonts';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #page-welcome {
@@ -40,6 +46,84 @@ body {
   height: 30vh;
 }
 
+// -------SIDENAV------
+.sidenav {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #262424;
+  z-index: 10;
+  &-show {
+    display: block;
+  }
+  &-hide {
+    display: none;
+  }
+  & ul {
+    position: relative;
+    list-style-type: none;
+    & li {
+      cursor: pointer;
+      & a {
+        display: flex;
+        color: #fff;
+        align-items: center;
+        font-family: fonts.$header-font-family;
+        font-size: 1.15em;
+        text-decoration: none;
+        text-transform: capitalize;
+        padding: 10px 30px;
+        height: 50px;
+        transition: 0.5s ease;
+        &:hover {
+          background: white;
+          color: #262424;
+        }
+        & span {
+          font-size: 1.5em;
+        }
+      }
+      & button {
+        width: 100%;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        font-family: fonts.$header-font-family;
+        font-size: 1.15em;
+        text-decoration: none;
+        text-transform: capitalize;
+        padding: 10px 30px;
+        height: 50px;
+        background: transparent;
+        border: 0 transparent;
+        & span {
+          font-size: 1.5em;
+        }
+      }
+    }
+    & ul {
+      position: absolute;
+      left: 250px;
+      width: 200px;
+      // height: 100vh;
+      // padding-top: 3em;
+      top: 0;
+      display: none;
+      background:  #db3149;
+    }
+    & .dropdown:hover ul {
+      display: initial;
+      & a:hover {
+        background: #262424;
+        color: white;
+      }
+    }
+  }
+}
+
+// -----PAGE CONTAINER------
+
 #page-container {
   width: 100vw;
   height: 100vh;
@@ -56,11 +140,14 @@ body {
 #navbar {
   position: relative !important;
 }
+
 .brand {
   position: absolute;
   left: 50%;
   margin-left: -50px !important; /* 50% of your logo width */
   display: block;
+  width: 95px;
+  height: 54px;
 }
 
 #showWelcome {
@@ -77,20 +164,20 @@ body {
   overflow-x: hidden;
 }
 
-#page-content-container{
-   font-family: fonts.$text-font-family;
+#page-content-container {
+  font-family: fonts.$text-font-family;
 }
 
 footer {
-  background: #1B0310 0% 0% no-repeat padding-box;
+  background: #1b0310 0% 0% no-repeat padding-box;
   justify-content: center;
   align-items: center;
   position: relative;
   margin-top: 10px;
 }
 
-footer::before{
-  content: '';
+footer::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 10px;
