@@ -166,7 +166,9 @@ body {
 }
 
 #page-content-container {
+  display: block;
   font-family: fonts.$text-font-family;
+  min-height: 100%;
 }
 
 footer {
