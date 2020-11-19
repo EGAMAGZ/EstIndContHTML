@@ -102,12 +102,11 @@ body {
     & ul {
       position: absolute;
       left: 250px;
-      width: 200px;
-      // height: 100vh;
-      // padding-top: 3em;
+      width: 450px;
+      font-size: 0.75em;
       top: 0;
       display: none;
-      background:  #db3149;
+      background: #db3149;
     }
     & .dropdown:hover ul {
       display: initial;
@@ -151,9 +150,6 @@ body {
   cursor: pointer;
 }
 
-#menuToogle{
-  border-color: #fff;
-}
 
 .hide {
   top: 100%;
