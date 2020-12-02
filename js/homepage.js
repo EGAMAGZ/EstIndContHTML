@@ -12,8 +12,9 @@ const display_page_container = () => {
         page_container.classList.add('show');
     }
     else {
-        page_container.classList.remove('show')
+        page_container.classList.remove('show');
         page_container.classList.add('hide');
+        hide_sidenav();
     }
 }
 
