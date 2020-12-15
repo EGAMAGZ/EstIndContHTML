@@ -1,4 +1,7 @@
+@use 'sass:map';
+
 @use 'fonts';
+@use 'breakpoints';
 
 .unity {
   &-header {
@@ -48,7 +51,19 @@
   .profile-img {
     display: inline;
     margin: 0 auto;
-    height: 100%;
+    height: 24px;
     width: auto;
+  }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "md")){
+  #contentContainer {
+    column-count: 2;
+  }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "sm")){
+  #contentContainer {
+    column-count: 1;
   }
 }

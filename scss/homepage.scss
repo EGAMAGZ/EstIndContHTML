@@ -1,5 +1,8 @@
+@use 'sass:map';
+
 @use 'base';
 @use 'fonts';
+@use 'breakpoints';
 
 * {
   margin: 0;
@@ -150,7 +153,6 @@ body {
   cursor: pointer;
 }
 
-
 .hide {
   top: 100%;
 }
@@ -189,5 +191,29 @@ footer::before {
 @keyframes bounce {
   50% {
     transform: translateY(-50%);
+  }
+}
+
+//  --- MEDIA QUERIES ---
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "md")) {
+  // For small devices to tablets, the icon > and dropdown won't appear
+  .sidenav {
+    & ul {
+      & .dropdown span{
+        display: none;
+      }
+      & .dropdown:hover ul {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "sm")) {
+  // Increase the size of the img in small devices
+  #page-welcome #welcome-container img {
+    width: 50vw;
+    height: 50vh;
   }
 }

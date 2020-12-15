@@ -1,4 +1,7 @@
+@use 'sass:map';
+
 @use 'fonts';
+@use 'breakpoints';
 
 .cover-image {
   display: block;
@@ -19,36 +22,69 @@
   margin-bottom: 16px;
 }
 
-.profile-container {
-  width: 32px;
-  height: 32px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.profile-img {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
+#content-header {
+  & .profile-container {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    & .profile-img {
+      display: inline;
+      margin: 0 auto;
+      height: 32px;
+      width: auto;
+    }
+  }
 }
 
 #content-article {
+  width: 100%;
   padding: 32px 0px 32px 0px;
+  overflow: hidden;
   & p {
     font-family: fonts.$text-font-family;
-    & > img, & > span > img {
+    & > img,
+    & > span > img {
       display: block;
+      object-fit: cover;
       margin-left: auto;
       margin-right: auto;
       width: 50%;
     }
   }
-  h1,h2,h3,h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: fonts.$title-font-family;
   }
-  & table{
+  & table {
     margin: auto;
+  }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "md")) {
+  #content-article {
+    & p > img,
+    & p > span > img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "sm")) {
+  #content-article {
+    & p > img,
+    & p > span > img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
   }
 }

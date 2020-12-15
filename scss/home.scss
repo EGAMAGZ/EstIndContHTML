@@ -1,0 +1,101 @@
+@use 'sass:map';
+
+@use 'fonts';
+@use 'breakpoints';
+
+#headerContainer{
+    width: 100vw;
+    height: 75vh;
+    & img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        filter: brightness(50%) blur(1px);
+    }
+    & div{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-family: fonts.$header-font-family;
+        z-index:1;
+    }
+}
+
+#homeContent{
+    margin-top: 1.5em;
+    & #lastContentContainer{
+        & h2{
+            font-family: fonts.$title-font-family;
+            text-align: center;
+        }
+        & div{
+            padding: 1.5em;
+            font-family: fonts.$text-font-family;
+        }
+    }
+    & #tabContainer{
+        padding: 0 1em 0 2em;
+        & #tab{
+            font-family: fonts.$header-font-family;
+            & .active{
+                color: #495057 !important;
+            }
+            & a{
+                color: #db3149 !important;
+            }
+        }
+        & #tabContent{
+            font-family: fonts.$text-font-family;
+            & div{
+                padding: 1em;
+            }
+            & #greeting ul{
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "lg")){
+    #homeContent{
+        & #tabContainer{
+            padding: 0 1em 0 1em;
+        }
+    }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "md")){
+    #headerContainer{
+        height: 50vh;
+        & div{
+            & h1{
+                font-size: 1.75rem;
+            }
+            & h2{
+                font-size: 1.25rem;
+            }
+        }
+    }
+    #homeContent{
+        & #tabContainer{
+            padding: auto;
+        }
+    }
+}
+
+@media (max-width: map.get(breakpoints.$grid-breakpoints, "sm")){
+    #headerContainer{
+        height: 30vh;
+        & div{
+            & h1{
+                font-size: 1.25rem;
+            }
+            & h2{
+                font-size: 1rem;
+            }
+        }
+    }
+}
